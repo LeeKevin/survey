@@ -74,6 +74,7 @@ module.exports = {
     getUser: function (cb) {
         if (userId) return cb(atob(userId));
         ecookie.get('uid', function (user_id) {
+            if (!user_id) return cb();
             userId = user_id;
             cb(atob(user_id));
         });
