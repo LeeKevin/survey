@@ -25,7 +25,7 @@ Alternatively, you can just download the project files and copy it somewhere on 
 
 ###Server
 
-Make sure your server machine is running [mysql](https://dev.mysql.com/downloads/mysql/) and has [node.js](http://nodejs.org/download/) installed before continuing.
+Make sure your server machine is running [mysql](https://dev.mysql.com/downloads/mysql/) and has [node.js](http://nodejs.org/download/) installed before continuing. (You might run into an issue while installing `bcrypt`. Create a symlink by executing `sudo ln -s /usr/bin/nodejs /usr/bin/node` after installing node.)
 
 Copy the contents of `server` to wherever you'll be serving this from.
 
@@ -116,3 +116,9 @@ gulp --production
 ```
 
 And copy the contents of `public` to wherever you'll be serving the pages from.
+
+## Usage
+
+In the demo, you'll see a small blue tab on the left hand side of your screen. This is the button to access the Admin dashboard to manage the survey questions.
+
+I used [evercookie](http://samy.pl/evercookie/) to recognize unique visitors to the site. Visitors will automatically be prompted to answer a unique survey question once they visit the site.
