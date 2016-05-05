@@ -8,6 +8,19 @@
   .modal-close {
     display: none;
   }
+
+  #admin-login-form {
+    label {
+      width: 75px;
+    }
+    input {
+      width: 150px;
+
+      &[type=submit] {
+        margin-left: 75px;
+      }
+    }
+  }
 }
 
 @media (min-width: 480px) {
@@ -16,6 +29,7 @@
     .modal-content {
       max-width: 470px;
     }
+
     .modal-close {
       display: block;
     }
@@ -30,6 +44,20 @@
       min-width: 400px;
       max-width: 580px;
     }
+
+    #admin-login-form {
+      label {
+        width: 150px;
+      }
+      input {
+        width: 200px;
+
+        &[type=submit] {
+          margin-left: 150px;
+        }
+      }
+    }
+
   }
 }
 

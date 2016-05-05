@@ -50,6 +50,10 @@
 
 // App namespace
 .survey-app {
+  input {
+    appearance: none;
+  }
+
   font-family: $body-font;
   color: #444;
   @import "global/template";
