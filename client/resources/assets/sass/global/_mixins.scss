@@ -1,0 +1,15 @@
+@mixin font-awesome-icon($content) {
+  content: $content;
+  font-family: FontAwesome;
+}
+
+@mixin clearfix() {
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}

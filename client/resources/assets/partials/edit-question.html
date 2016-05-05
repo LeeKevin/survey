@@ -1,0 +1,16 @@
+<form class="edit-question-form">
+    <label for="edit-question-value">Question</label>
+    <input id="edit-question-value" class="edit-question-value" name="question" type="text" value="{{question}}"/>
+
+    <label>Options</label>
+    <a class="add-question-item" title="Add an option"></a>
+
+    <div class="question-items-list">
+        {{#QuestionItems}}
+            {{> question-item-editable }}
+        {{/QuestionItems}}
+    </div>
+
+    <input type="submit" value="Save"/>
+    <span id="edit-question-error" class="error" style="display: none;"></span>
+</form>

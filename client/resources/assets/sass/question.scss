@@ -1,0 +1,81 @@
+.info {
+  font-size: 0.75em;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.header {
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: #000;
+}
+
+ul.question-items {
+  margin: 1.5em 0;
+  list-style: none;
+  padding: 0;
+
+  > li.question-item {
+    font-size: 1em;
+    padding: .3em 0 .3em 2em;
+    color: #555;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    animation: .3s all ease;
+
+    &::before {
+      @include font-awesome-icon('\f10c');
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &.selected {
+      &::before {
+        content: '\f058';
+        color: #87DC6B;
+      }
+    }
+  }
+}
+
+.question-submit {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  background-color: #5777FD;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  font-size: .8em;
+  min-width: 200px;
+
+  &::after {
+    @include font-awesome-icon('\f061');
+    position: absolute;
+    right: 1rem;
+  }
+
+  ~ .error {
+    color: $error-color;
+    padding: .5rem 0 0 0;
+    display: block;
+    text-align: center;
+    font-size: .75em;
+    animation-name: animatetop;
+    animation-duration: 0.2s;
+  }
+}
+
+.thanks {
+  font-size: 1.1em;
+  display: block;
+  text-align: center;
+  padding: 2em 3em;
+}

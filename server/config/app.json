@@ -1,0 +1,8 @@
+{
+  "port": 55555,
+  "cors": {
+    "AllowOrigin": [
+      "http://survey.app"
+    ]
+  }
+}

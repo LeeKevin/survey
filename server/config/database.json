@@ -1,0 +1,7 @@
+{
+  "database": "survey",
+  "username": "homestead",
+  "password": "secret",
+  "host": "localhost",
+  "port": "33060"
+}

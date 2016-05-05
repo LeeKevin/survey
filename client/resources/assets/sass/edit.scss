@@ -1,0 +1,78 @@
+.edit-question-form {
+  label {
+    display: inline-block;
+    margin: .6em 0 .3em;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: .3em 0;
+    padding: .3em .5em;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: 0;
+  }
+
+  input[type=submit] {
+    margin-top: .6em;
+    background-color: #5777FD;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    + .error {
+      color: $error-color;
+      float: left;
+      width: 100%;
+      padding: 1rem 0 0 0;
+      display: inline-block;
+      text-align: center;
+      font-size: .75em;
+      animation-name: animatetop;
+      animation-duration: 0.2s;
+      border: none;
+      clear: both;
+    }
+  }
+
+  .error {
+    border-color: $error-color;
+  }
+
+  .add-question-item {
+    position: absolute;
+    right: 2.8em;
+    margin-top: .75em;
+
+    &::before {
+      @include font-awesome-icon('\f0fe');
+    }
+  }
+
+  .question-item-container {
+    position: relative;
+
+    input {
+      padding-right: 2em;
+    }
+  }
+
+  .remove-question-item {
+    position: absolute;
+    right: .5em;
+    position: absolute;
+    right: .5em;
+    top: 50%;
+    line-height: 1em;
+    transform: translateY(-50%);
+
+    &::before {
+      @include font-awesome-icon('\f146');
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.survey-app {
+  font-size: 12px;
+
+  .modal-content {
+    max-width: 310px;
+  }
+
+  .modal-close {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) {
+  .survey-app {
+
+    .modal-content {
+      max-width: 470px;
+    }
+    .modal-close {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .survey-app {
+    font-size: 14px;
+
+    .modal-content {
+      min-width: 400px;
+      max-width: 580px;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .survey-app {
+
+    .modal-content {
+      min-width: 450px;
+      max-width: 700px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h2>Survey Admin</h2>
+    <a class="logout">logout</a>
+</div>
+<div class="modal-content-area">
+    {{#if asTemplate}}
+        <a class="survey-admin-back">Back</a>
+        <div class="survey-admin-dashboard-area"></div>
+    {{else}}
+        <a class="create-question">Add Question</a>
+        <div id="active-questions-container"></div>
+        <div id="archived-questions-container"></div>
+    {{/if}}
+</div>

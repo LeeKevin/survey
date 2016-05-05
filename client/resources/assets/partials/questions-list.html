@@ -1,0 +1,25 @@
+<span class="survey-header {{#minimized}}minimized{{/minimized}}" data-count="{{count}}">{{status}} questions</span>
+<ul class="dashboard-question-list">
+    {{#questions}}
+        <li>
+            <div class="question" data-id="{{id}}">
+                <a title="{{question}}">{{question}}</a>
+                <div class="question-actions">
+                    {{^archived}}
+                        <a class="question-edit fa fa-pencil {{#if AnswerTotal}}disabled{{/if}}" title="{{#if AnswerTotal}}This question cannot be edited because it has already been answered{{else}}Edit this question{{/if}}"></a>
+                        <a class="question-archive fa fa-archive" title="Archive this question"></a>
+                    {{/archived}}
+                </div>
+            </div>
+            <div class="question-details">
+                <div class="total-count">Count: {{AnswerTotal}}</div>
+                {{#QuestionItems}}
+                    <div class="option-container">
+                        {{option}}
+                        <span class="option-percent">{{percent AnswerCount ../AnswerTotal}}</span>
+                    </div>
+                {{/QuestionItems}}
+            </div>
+        </li>
+    {{/questions}}
+</ul>

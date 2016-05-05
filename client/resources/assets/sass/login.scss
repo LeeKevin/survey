@@ -1,0 +1,76 @@
+.login-header {
+  font-size: 1.1em;
+  color: #555;
+}
+
+#admin-login-form {
+  @include clearfix();
+  color: #555;
+  margin: 2em 0;
+
+  label {
+    float: left;
+    width: 150px;
+    clear: both;
+    padding: .2em .75em;
+  }
+
+  input {
+    float: left;
+    width: 200px;
+    outline: 0;
+    border: 1px solid #888;
+    padding: .3em .75em;
+  }
+
+  label, input {
+    margin: .5em 0;
+  }
+
+  input[type=submit] {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    background-color: #5777FD;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: .8em;
+    min-width: 200px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    clear: both;
+    margin-left: 150px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    ~ .error {
+      color: $error-color;
+      float: left;
+      width: 100%;
+      padding: 1rem 0 0 0;
+      display: inline-block;
+      text-align: center;
+      font-size: .75em;
+      animation-name: animatetop;
+      animation-duration: 0.2s;
+      border: none;
+      clear: both;
+    }
+  }
+
+  .error {
+    border-color: $error-color;
+  }
+}
+
+.logout {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+}
